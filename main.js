@@ -1,32 +1,3 @@
-// CRONOMETRO 
-let cronometro = document.getElementById("cronometro");
-let empezarCronometro = document.getElementById("startTimer")
-let timerCount = 0;
-let timerStarted = false;
-let intervalId;
-
-
-empezarCronometro.addEventListener("click", function timer(){
-    if(timerStarted == false){
-        intervalId = setInterval(function(){
-            if (timerStarted == false);
-            timerStarted = true;
-            timerCount++;
-            console.log(timerStarted);
-            empezarCronometro.innerText = ("Restart");
-            cronometro.innerText = (timerCount);
-        }, 1000);
-    }
-    else{
-        clearInterval(intervalId);
-        cronometro.innerText = (0);
-        timerStarted = false;
-        timerCount = 0;
-        empezarCronometro.innerText = ("Start");
-
-    }
-});
-
 //CREACION TABLERO
 
 const boardCordinates = [];
@@ -49,23 +20,41 @@ for (let row = 8; row >= 1; row--) {
     chessboard.appendChild(cell);
   }
 }
- 
-//GENERADOR DE COORDENADAS
-
-let randomCurrentCoordinate = Math.floor(Math.random() * boardCordinates.length);
-let randomCurrentCoordinates = boardCordinates[randomCurrentCoordinate];
-const letterSpawner = document.getElementById("letterSpawner");
-const htmlCoordinate = document.getElementById(randomCurrentCoordinates);
 
 
-htmlCoordinate.setAttribute("class", "green");
-letterSpawner.innerText = (randomCurrentCoordinates);
+//CRECION DE FUNCION CRONOMETRO
 
+let gameStarted = false;
+const botonStart = document.getElementById("startGame")
+const textoHTMLCronometro = document.getElementById("cronometro")
+let inicioCronometro = 0;
+IntervalId = "";
 
+botonStart.addEventListener("click", function(){
+  if(gameStarted == false){
+    gameStarted = true;
+    IntervalId = setInterval(() => {
+      inicioCronometro++
+      textoHTMLCronometro.innerText = (inicioCronometro);
+      botonStart.innerText = ("Restart")
+    }, 1000);
+    
+  }
+  else{
+    gameStarted = false;
+    textoHTMLCronometro.innerText = (0);
+    clearInterval(IntervalId);
+    inicioCronometro = 0;
+  }
+})
 
+//CREACION DE COORDENADAS ALEATORIAS
 
-
-
+let textoHTMLconCoordenadas = document.getElementById("letterSpawner")
+let valorAleatorioDelTablero = Math.floor(Math.random() * boardCordinates.length);  // UN VALOR MATEMATICO ENTRE 1 Y 64
+let cordenadaAleatoriaDelTablero = boardCordinates[valorAleatorioDelTablero]; // ELIGE LA CORDENADA ALEATORIA EN ESA POSICION
+let piezaDelTablero = document.getElementById(cordenadaAleatoriaDelTablero);  //SELECCIONA EL DIV EN EL QUE ESTA ESA PIEZA
+textoHTMLconCoordenadas.innerText = (cordenadaAleatoriaDelTablero);
 
 
 
