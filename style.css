@@ -1,0 +1,88 @@
+body{
+    font-family: sans-serif;
+}
+#main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+#main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#chessboard{
+    display: grid;
+    grid-template-columns: repeat(8,90px);
+    grid-template-rows: repeat(8,90px);
+    border: 1px solid black;
+    width: 720px;
+    height: 720px;
+}
+
+#chessboard div{
+    width: 90px;
+    height: 90px;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    height: 3px;
+}
+
+.white {
+  background-color: #eee;
+}
+
+.black {
+  background-color: #333;
+}
+
+.green{
+    background-color: #7e0;
+}
+
+button{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 01px solid #333;
+}
+
+
+#main-container p{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+#letterSpawner{
+    font-size: 35px;
+}
+
+
+.card {
+ width: 300px;
+ margin: 0 auto;
+ background-color: #333;
+ border-radius: 8px;
+ align-items: center;
+ align-content: center;
+ margin-top: 30%;
+ padding: 10px;
+color: #eee;
+}
+
+
+
+
+
