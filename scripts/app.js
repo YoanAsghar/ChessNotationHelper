@@ -6,7 +6,7 @@ const COORDINATES = []
 const CHESSBOARD = document.getElementById('chessboard');
 const STARTGAME = document.getElementById('startgame')
 const SCORETEXT = document.getElementById('score')
-const CHESSSOUND = new Audio('../sounds/move-self.mp3')
+const CHESSSOUND = new Audio('/sounds/move-self.mp3')
 let score = 0
 
 function createboard() {
