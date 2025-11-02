@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <title>ChessNotationHelper</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="leftSpace">
+            <div id="chessboard">
+            </div>
+        </div>
+        <div id="rightSpace">
+            <h1>Chess Notation Helper</h1>
+            <h2>Black's Perspective</h2>
+            <p id="instructions">Do you struggle to remember where "f7" or "c3" is without having to count? Mastering chess notation can feel tedious, but it is essential for improving your game, reading strategy books, and following famous matches. <br> <br>
+
+            Fortunately, you've found a way to speed up that process! We've transformed boring memorization into a dynamic game. The system will give you a coordinate, and you must locate it on the board with a click. <br> <br>
+
+            Every time you get it right, you'll score points, but the real reward is something else. The objective is that with every game, your recognition of the board becomes more instinctive. Over time, you'll stop "searching" for the squares and start "seeing" them instantly.</p>
+        <div id="infoCard">
+            <p id="timer">Time : 0</p>
+            <p id="score">Score : 0</p>    
+        </div>
+            <p id="cordsPlaying">Press start!</p>
+            <div id="buttons">
+                <button id="startgame">Start game</button>
+                <a href="index.html" id="turnAroundBoardButton">Turn board </a>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./scripts/turnAroundBoard.js"></script>
+</body>
+</html>

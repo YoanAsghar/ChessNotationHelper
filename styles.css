@@ -1,0 +1,128 @@
+body, html{
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+#mainDiv{
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    height: 100%;
+}
+
+#leftSpace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+}
+
+#rightSpace{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#instructions{
+    border: 3px solid white;
+    width: 75%;
+    border-radius: 5px;   
+    padding: 20px;
+    font-size: 12px;
+}
+
+#chessboard{
+    display: grid;
+    height: 80vh;
+    width: 80vh;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(8, 12.5%) ;
+    background-color: white;
+    border: 20px solid black;
+}
+
+.black{
+    background-color: brown;
+    width: 8fr;
+}
+
+.white{
+    background-color: white;
+}
+
+#infoCard{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    font-size: 30;
+    border: 3px solid white;
+    height: 15%;
+    width: 75%;
+    align-items: center;
+    border-radius: 3px;
+    justify-content: center;
+    font-size: 25px;
+
+}
+
+button{
+    background-color: white;
+    height: 70px;
+    width: 50%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button:hover{
+    scale: 1.1;
+    font-size: 18px;
+}
+
+#chessboard p{
+    margin: 0;
+    font-size: 8fr;
+}
+
+#letterPlaying{
+    margin-top: 15%;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.Green{
+    background-color: lightgreen;
+}
+
+#score{
+    margin-top: 0;
+}
+
+#cordsPlaying{
+    font-size: 48px;
+    margin-top: 10%;
+}
+
+#turnAroundBoardButton{
+    background-color: white;
+    height: 70px;
+    width: 50%;
+    font-size: 20px;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
